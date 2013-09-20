@@ -1,0 +1,29 @@
+$custom_color: red;
+$custom_margin: 16px;
+$border_color_1: red;
+$border_color_2: blue;
+
+@mixin theme {
+	color: $custom_color;
+}
+
+@mixin border_color($color) {
+	border-color: $color;
+}
+
+@mixin padding_and_margin($factor) {
+	padding: $custom_margin * $factor;
+	margin: $custom_margin * $factor;
+}
+
+.roxanne {
+	@include theme;
+	@include padding_and_margin(1);
+	@include border_color($border_color_1);
+}
+
+.paul {
+	@include padding_and_margin(1/2);
+	@include border_color($border_color_2);
+}
+

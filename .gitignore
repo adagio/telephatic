@@ -1,0 +1,6 @@
+#temporary files
+*~
+
+#sass cache
+styles/.sass-cache
+
